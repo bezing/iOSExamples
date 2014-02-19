@@ -146,7 +146,30 @@ enum TestNum {
     //[blockClass testEnumeratedBlocks];
     //[blockClass testSampleBlocks];
      
-    [blockClass testInlineVesusVariableBlocks];
+    //[blockClass testInlineVesusVariableBlocks];
+
+    
+    
+    NSMutableArray *movieQueue = [NSMutableArray arrayWithObjects:@"Inception", @"Book of Eli", @"Independence Day", nil];
+    
+    
+    // Initialize a class with a callback
+    Blocks *block = [[Blocks alloc] initWithCallback:^(NSString *title) {
+        NSLog(@"Removing %@", title);
+        // Array becomes part of the state of the block, not __block for movieQueue
+        // because we are modifiying it's contents but where where the array pointer is pointing
+        [movieQueue removeObject:title];
+    }];
+    
+    // playMovie method calls the callback
+    //[blockClass playMovie:@"Inception"];
+    
+    // Have to use [NSArray arrayWithArray which returns the instance
+    // of the arrays otherwise if you just use movieQueue you will
+    // be removing instances from the actual collection while it is in used
+    for (NSString *movieTitle in [NSArray arrayWithArray:movieQueue]) {
+        [block playMovie:movieTitle];
+    }
 }
 
 -(void)testClasses {

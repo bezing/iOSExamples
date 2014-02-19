@@ -13,18 +13,56 @@
 
 -(id) init {
     if (self = [super init]) {
-
-        
     }
     return  self;
 }
 
--(void)checkEvenint:(int)integer completionBlock:(CompletionBlock)block {
-    
-    if (integer == 2) {
-        block(TRUE);
-    }else {
-        block(FALSE);
+-(id)initWithCallback:(MoviePlayerCallbackBlock)block {
+    if (self = [super init]) {
+        // Initialize this class with a callback and pass it to our property block
+        // which will be called in playMovie:
+        self.MoviePlayerCallbackBlock = block;
+    }
+    return  self;
+}
+
+-(void)playMovie:(NSString *)title {
+    self.MoviePlayerCallbackBlock(title);
+}
+
+-(ComputationBlock)returnBlock:(int)y {
+    ComputationBlock block = ^(int x) {
+        return (int)pow(x, y);
+    };
+    return block ;
+}
+
+/*
+ For the block definition, we do not have to include the parameter names, ie 'number' and 'success
+ it could just be (void (^)(int, BOOL *))block and it would just be the same. I write out the names
+ because this is how apple does it. Also we are passing a reference to BOOL instead of a primitive
+*/
+-(void)runIterationTo:(int)iterationLimit withCompletionBlock:(void (^)(int number, BOOL *success))block {
+    // Run the block with the amount given
+    for (int i=0; i<iterationLimit; i++) {
+        
+        BOOL success = TRUE;
+        
+        //NSLog(@"%i", &number);
+        
+        /* 
+         & finds the memory address of success variable
+         while * dereferences it to find the value
+         We are passing a reference to our success flag which
+         is used to stopped the iteration when our block
+         changes the value of success
+        */
+        block(i, &success);
+        
+        if (!success) {
+            NSLog(@"break");
+            break;
+        }
     }
 }
 
@@ -49,6 +87,18 @@
         return number * 10;
     }];
     
+    // Test multiple parameter block
+    [self runIterationTo:10 withCompletionBlock:^(int number, BOOL *success) {
+        if (number >4) {
+            *success = FALSE;
+        }
+        NSLog(@"%i  %hhd", number, *success);
+    }];
+    
+    // Test return blocks
+    ComputationBlock block = [self returnBlock:3];
+    int returnValue = block(5);
+    NSLog(@"%i", returnValue);
 }
 
 -(void)iterateFromOneTo:(int)limit withBlock:(int (^)(int))block {
@@ -65,14 +115,12 @@
     }
 }
 
-
 -(void)testEnumeratedBlocks {
     NSArray *testArray = [NSArray arrayWithObjects:@"zero",@"one", @"two", @"three", @"four", nil];
     [testArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSLog(@"%@   %i   %s", obj, idx, stop );
         
         if (idx>=3) {
-            
             // Stop is equivalent to break, it'll stop the iteration
             *stop = YES;
             NSLog(@"Stopped");
@@ -80,7 +128,7 @@
     } ];
 }
 
-// How to write the eumerate part
+// How to write the eumerate block part
 -(void)enumerateObjectsUsingBlock:(void (^) (id obj , NSInteger  idx, BOOL *stop))block {
     
     /*
@@ -97,8 +145,13 @@
     */
 }
 
--(void)checkSuccessBlock:(SuccessBlock)success Failure:(ErrorBlock)error {
+-(void)checkEvenint:(int)integer completionBlock:(CompletionBlock)block {
     
+    if (integer == 2) {
+        block(TRUE);
+    }else {
+        block(FALSE);
+    }
 }
 
 -(void)checkSuccessBlock:(void (^)(void))completionBlock onError:(void (^)(NSError *))errorBlock {
