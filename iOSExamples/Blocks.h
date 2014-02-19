@@ -12,6 +12,7 @@ typedef void (^CompletionBlock) (BOOL);
 typedef void(^CompletionHandler)(BOOL, BOOL);
 typedef void (^SuccessBlock)(BOOL);
 typedef void (^ErrorBlock)(BOOL);
+typedef int (^ComputationBlock)(int);
 
 // how to define nsstring as a return argument in blocks?
 
@@ -30,16 +31,10 @@ typedef void (^ErrorBlock)(BOOL);
 -(void)testEnumeratedBlocks;
 
 // The "(int(^)(int)) repsents the type of block, just like int is a type
--(void)repeat:(int)repeatCount withBlocks:(int (^) (int) )block;
-
-
-
-
 -(void)iterateFromOneTo:(int)limit withBlock:(int (^) (int)) block;
-
-
-
+-(void)iterateFromOneTo:(int)limit withTypDefBlock:(ComputationBlock)block;
 -(void)testInlineVesusVariableBlocks;
+
 
 @end
 

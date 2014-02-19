@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		60A4F03B18AAA8BF00815029 /* Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F03A18AAA8BF00815029 /* Blocks.m */; };
+		60A4F03E18B4527100815029 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F03D18B4527100815029 /* GCDViewController.m */; };
+		60A4F04118B4527F00815029 /* Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F04018B4527F00815029 /* Blocks.m */; };
 		60A6AAC7188FECD70077C74F /* Variables.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAC6188FECD70077C74F /* Variables.m */; };
-		60A6AAD2189C415C0077C74F /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAD0189C415C0077C74F /* GCDViewController.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
 		60E28D81186E182F00D9E723 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D80186E182F00D9E723 /* CoreGraphics.framework */; };
@@ -40,12 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		60A4F03918AAA8BF00815029 /* Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blocks.h; sourceTree = "<group>"; };
-		60A4F03A18AAA8BF00815029 /* Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blocks.m; sourceTree = "<group>"; };
+		60A4F03C18B4527100815029 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDViewController.h; path = iOSExamples/GCDViewController.h; sourceTree = "<group>"; };
+		60A4F03D18B4527100815029 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDViewController.m; path = iOSExamples/GCDViewController.m; sourceTree = "<group>"; };
+		60A4F03F18B4527F00815029 /* Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Blocks.h; path = iOSExamples/Blocks.h; sourceTree = "<group>"; };
+		60A4F04018B4527F00815029 /* Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Blocks.m; path = iOSExamples/Blocks.m; sourceTree = "<group>"; };
 		60A6AAC5188FECD70077C74F /* Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variables.h; sourceTree = "<group>"; };
 		60A6AAC6188FECD70077C74F /* Variables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variables.m; sourceTree = "<group>"; };
-		60A6AACF189C415C0077C74F /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
-		60A6AAD0189C415C0077C74F /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
 		60AE19761873EEA100A08947 /* Operators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operators.m; sourceTree = "<group>"; };
 		60E28D7B186E182F00D9E723 /* iOSExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +99,8 @@
 		60A4F00318A58C0400815029 /* Callbacks */ = {
 			isa = PBXGroup;
 			children = (
-				60A4F03918AAA8BF00815029 /* Blocks.h */,
-				60A4F03A18AAA8BF00815029 /* Blocks.m */,
+				60A4F03F18B4527F00815029 /* Blocks.h */,
+				60A4F04018B4527F00815029 /* Blocks.m */,
 			);
 			name = Callbacks;
 			sourceTree = "<group>";
@@ -108,8 +108,8 @@
 		60A6AAC8189C3E2A0077C74F /* MultiThreading */ = {
 			isa = PBXGroup;
 			children = (
-				60A6AACF189C415C0077C74F /* GCDViewController.h */,
-				60A6AAD0189C415C0077C74F /* GCDViewController.m */,
+				60A4F03C18B4527100815029 /* GCDViewController.h */,
+				60A4F03D18B4527100815029 /* GCDViewController.m */,
 			);
 			name = MultiThreading;
 			sourceTree = "<group>";
@@ -295,9 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				60E28D98186E182F00D9E723 /* ViewController.m in Sources */,
-				60A4F03B18AAA8BF00815029 /* Blocks.m in Sources */,
+				60A4F03E18B4527100815029 /* GCDViewController.m in Sources */,
+				60A4F04118B4527F00815029 /* Blocks.m in Sources */,
 				60E28DB8186E185000D9E723 /* Arrays.m in Sources */,
-				60A6AAD2189C415C0077C74F /* GCDViewController.m in Sources */,
 				60AE19771873EEA100A08947 /* Operators.m in Sources */,
 				60A6AAC7188FECD70077C74F /* Variables.m in Sources */,
 				60E28D8F186E182F00D9E723 /* AppDelegate.m in Sources */,

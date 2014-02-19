@@ -37,12 +37,17 @@
        return  number  * 3;
    }];
     
-    
    // Pass a block by variable
     int(^variableBlock)(int) = ^(int number) {
         return number * 5;
     };
     [self iterateFromOneTo:5 withBlock:variableBlock];
+    
+    
+    // Test the method with a typedef block
+    [self iterateFromOneTo:10 withTypDefBlock:^(int number) {
+        return number * 10;
+    }];
     
 }
 
@@ -50,6 +55,13 @@
     for (int i=0; i<limit; i++) {
         int numberInt = block(i);
         NSLog(@"%i", numberInt);
+    }
+}
+
+-(void)iterateFromOneTo:(int)limit withTypDefBlock:(ComputationBlock)block {
+    for (int i=0; i<limit;i++) {
+        int returnInt = block(i);
+        NSLog(@"%i", returnInt);
     }
 }
 
