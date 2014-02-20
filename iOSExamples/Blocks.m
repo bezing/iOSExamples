@@ -17,6 +17,20 @@
     return  self;
 }
 
+-(void)testRunBlock {
+    // Pass a block literal through the parameter methods
+    [self runBlock:^(int number) {
+        NSLog(@"Number is %i", number);
+    }];
+}
+
+// In the parameter is the block type followed by the block name
+-(void)runBlock: (void(^)(int))block  {
+    block(5);
+}
+
+// Initialize a class with a block and pass the block to a property
+// which you will call later on.
 -(id)initWithCallback:(MoviePlayerCallbackBlock)block {
     if (self = [super init]) {
         // Initialize this class with a callback and pass it to our property block
@@ -45,9 +59,7 @@
 -(void)runIterationTo:(int)iterationLimit withCompletionBlock:(void (^)(int number, BOOL *success))block {
     // Run the block with the amount given
     for (int i=0; i<iterationLimit; i++) {
-        
         BOOL success = TRUE;
-        
         //NSLog(@"%i", &number);
         
         /* 
@@ -81,7 +93,6 @@
     };
     [self iterateFromOneTo:5 withBlock:variableBlock];
     
-    
     // Test the method with a typedef block
     [self iterateFromOneTo:10 withTypDefBlock:^(int number) {
         return number * 10;
@@ -99,6 +110,7 @@
     ComputationBlock block = [self returnBlock:3];
     int returnValue = block(5);
     NSLog(@"%i", returnValue);
+    
 }
 
 -(void)iterateFromOneTo:(int)limit withBlock:(int (^)(int))block {
@@ -130,7 +142,6 @@
 
 // How to write the eumerate block part
 -(void)enumerateObjectsUsingBlock:(void (^) (id obj , NSInteger  idx, BOOL *stop))block {
-    
     /*
     for (id obj in self) {
         BOOL stop = NO;
@@ -146,7 +157,6 @@
 }
 
 -(void)checkEvenint:(int)integer completionBlock:(CompletionBlock)block {
-    
     if (integer == 2) {
         block(TRUE);
     }else {
@@ -159,7 +169,6 @@
 }
 
 -(void)checkValues:(int)integer completionHandler:(CompletionHandler)blockValue {
-    
     if (integer % 2 == 0) {
         blockValue (TRUE, FALSE);
     }else {
@@ -168,7 +177,6 @@
 }
 
 -(void)testBlockMethods {
-    
     // Test block by running a uiview with completion block
     [UIView animateWithDuration:0.0 animations:^{
         //
@@ -180,7 +188,6 @@
 }
 
 -(void)testSampleBlocks {
-    
     /*
     ^void (void) {
         NSLog(@"Testing block sample 1");
@@ -191,7 +198,6 @@
         NSLog(@"Sample block 2");
     }();
     */
-    
     
     // Assigning blocks to variables and calling them
     
@@ -216,8 +222,6 @@
     NSLog(@"%i", result);
     
 }
-
-
 
 @end
 

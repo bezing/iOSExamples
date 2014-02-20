@@ -170,6 +170,7 @@ enum TestNum {
     for (NSString *movieTitle in [NSArray arrayWithArray:movieQueue]) {
         [block playMovie:movieTitle];
     }
+
 }
 
 -(void)testClasses {
