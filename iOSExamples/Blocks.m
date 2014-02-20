@@ -55,8 +55,11 @@
  For the block definition, we do not have to include the parameter names, ie 'number' and 'success
  it could just be (void (^)(int, BOOL *))block and it would just be the same. I write out the names
  because this is how apple does it. Also we are passing a reference to BOOL instead of a primitive
+ 
+ Do not need to add successFlag name but included it. The parameter is of type reference pointer to
+ a bool value.
 */
--(void)runIterationTo:(int)iterationLimit withCompletionBlock:(void (^)(int number, BOOL *success))block {
+-(void)runIterationTo:(int)iterationLimit withCompletionBlock:(void (^)(int number, BOOL *successFlag))block {
     // Run the block with the amount given
     for (int i=0; i<iterationLimit; i++) {
         BOOL success = TRUE;
@@ -68,6 +71,8 @@
          We are passing a reference to our success flag which
          is used to stopped the iteration when our block
          changes the value of success
+         Use & to pass the memery address to the parameter 
+         of type reference pointer. 
         */
         block(i, &success);
         
@@ -101,15 +106,16 @@
     // Test multiple parameter block
     [self runIterationTo:10 withCompletionBlock:^(int number, BOOL *success) {
         if (number >4) {
+        // *success is a reference pointer to a bool value.
             *success = FALSE;
         }
-        NSLog(@"%i  %hhd", number, *success);
+        NSLog(@"Testing %i  %hhd", number, *success);
     }];
     
     // Test return blocks
     ComputationBlock block = [self returnBlock:3];
     int returnValue = block(5);
-    NSLog(@"%i", returnValue);
+    //NSLog(@"%i", returnValue);
     
 }
 

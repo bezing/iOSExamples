@@ -36,7 +36,7 @@ typedef void (^MoviePlayerCallbackBlock)(NSString *);
 
 // The parenthesis before the block is the type of block so void is the return
 // The caret signals block, the right parenthesis signals parameters
--(void)runIterationTo:(int)iterationLimit withCompletionBlock: (void(^)(int number , BOOL *success)) block ;
+-(void)runIterationTo:(int)iterationLimit withCompletionBlock: (void(^)(int number , BOOL *successFlag)) block ;
 
 -(ComputationBlock)returnBlock:(int)x;
 

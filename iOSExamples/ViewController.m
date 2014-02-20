@@ -29,9 +29,6 @@
     //[self runDailyLineOfCode];
 }
 
-
-
-
 enum TestNum {
     NumA= 1,
     NumB= 2,
@@ -97,8 +94,7 @@ enum TestNum {
         sampleInt +=10;
         NSLog(@"%i", sampleInt);
     }
-    
-    
+
     
 }
 
@@ -145,18 +141,14 @@ enum TestNum {
     
     //[blockClass testEnumeratedBlocks];
     //[blockClass testSampleBlocks];
-     
     //[blockClass testInlineVesusVariableBlocks];
 
     
-    
     NSMutableArray *movieQueue = [NSMutableArray arrayWithObjects:@"Inception", @"Book of Eli", @"Independence Day", nil];
-    
-    
     // Initialize a class with a callback
     Blocks *block = [[Blocks alloc] initWithCallback:^(NSString *title) {
-        NSLog(@"Removing %@", title);
-        // Array becomes part of the state of the block, not __block for movieQueue
+       // NSLog(@"Removing %@", title);
+        // Array becomes part of the state of the block, dont need to use __block for movieQueue
         // because we are modifiying it's contents but where where the array pointer is pointing
         [movieQueue removeObject:title];
     }];
@@ -168,9 +160,35 @@ enum TestNum {
     // of the arrays otherwise if you just use movieQueue you will
     // be removing instances from the actual collection while it is in used
     for (NSString *movieTitle in [NSArray arrayWithArray:movieQueue]) {
-        [block playMovie:movieTitle];
+        //[block playMovie:movieTitle];
     }
+    
+    // Test daily block
+   __block int localVariable = 5;
+    // The type for the second parameter is a pointer to bool value
+    [self runBlock:^(int number, bool *stop) {
+        localVariable *= number;
+        NSLog(@"Number: %i   %i", number, localVariable);
+        
+        if (number>=5) {
+        // We have a reference to a bool value passed through the parameter
+            *stop = TRUE;
+        }
+    }];
+}
 
+-(void)runBlock:(void(^)(int number, bool *stop))block{
+    for (int i=1; i<10; i++) {
+        bool stopIteration = FALSE;
+        // & gives you the memory address, so we are passing a reference to the
+        // memory address through the parameter so we can access and change it
+        // to stop the iteration.
+        // stopIteration without * or & is a primitive
+        block(i, &stopIteration);
+        if (stopIteration) {
+            break;
+        }
+    }
 }
 
 -(void)testClasses {
