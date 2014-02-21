@@ -12,5 +12,6 @@
 
 
 -(void)testOperations;
+-(void)checkTernaryOperator;
 
 @end

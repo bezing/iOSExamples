@@ -23,11 +23,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self testClasses];
+   // [self testClasses];
     
+   // [self runBlockSamples];
+
+   // [self runDailyLineOfCode];
     
-    //[self runDailyLineOfCode];
+   // [self testFizzBuzz];
+    
+   BOOL palindrome = [self checkPalindrom:@"CAA3AC"];
+    NSLog(palindrome ? @"TRUE" : @"FALSE");
 }
+
 
 enum TestNum {
     NumA= 1,
@@ -50,7 +57,6 @@ enum TestNum {
     int b = 5;
     int c = a / b ;
     //NSLog(@"%f", c);
-
     
     switch (a) {
         case NumA:
@@ -94,8 +100,36 @@ enum TestNum {
         sampleInt +=10;
         NSLog(@"%i", sampleInt);
     }
-
     
+}
+
+-(BOOL)checkPalindrom:(NSString*)string {
+
+    int stringLength = string.length;
+    BOOL palindrome = TRUE;
+    
+    for (int i=0; i<stringLength/2; i++) {
+        
+        if ([string characterAtIndex:i] != [string characterAtIndex:string.length-i-1]) {
+            return palindrome = FALSE;
+        }
+    }
+    
+    return palindrome;
+}
+
+-(void)testFizzBuzz {
+    for (int i=1; i<=100; i++) {
+        if (i%3==0 && i%5==0) {
+            NSLog(@"Fizz Buzz");
+        }else if (i%3==0) {
+            NSLog(@"Fizz");
+        }else if (i%5==0) {
+            NSLog(@"Buzz");
+        }else {
+            NSLog(@"%i", i);
+        }
+    }
 }
 
 -(void)runBlockSamples {
@@ -199,12 +233,9 @@ enum TestNum {
     
     Operators *operator = [[Operators alloc] init];
     //[operator testOperations];
-    
+    [operator checkTernaryOperator];
     
     Variables *variables = [[Variables alloc] init];
-    
-    
-    [self runBlockSamples];
     
 }
 
