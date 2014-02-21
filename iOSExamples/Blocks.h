@@ -20,7 +20,7 @@ typedef void (^MoviePlayerCallbackBlock)(NSString *);
 @property (nonatomic, copy) void (^onCompletion)(void);
 @property (nonatomic, copy) void (^MoviePlayerCallbackBlock)(NSString*);
 
--(void)testBlockMethods;
+-(void)testBockMethods;
 -(void)testSampleBlocks;
 -(void)checkEvenint:(int)integer completionBlock:(CompletionBlock)block;
 -(void)checkValues:(int)integer completionHandler:(CompletionHandler)blockValue;

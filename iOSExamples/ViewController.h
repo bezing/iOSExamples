@@ -10,4 +10,5 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)showJSONClass:(id)sender;
 @end

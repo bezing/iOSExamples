@@ -11,6 +11,7 @@
 #import "Operators.h"
 #import "Variables.h"
 #import "Blocks.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
 
@@ -29,12 +30,37 @@
 
    // [self runDailyLineOfCode];
     
-   // [self testFizzBuzz];
     
-   BOOL palindrome = [self checkPalindrom:@"CAA3AC"];
-    NSLog(palindrome ? @"TRUE" : @"FALSE");
+   BOOL isPalindrome =  [self checkStringIsPalindrome:@"CAC"];
+    NSLog(isPalindrome ? @"TRUE" : @"FALSE");
+    
+
 }
 
+
+-(BOOL)checkStringIsPalindrome:(NSString*)string {
+    
+    // Check first string to last string so
+    // run checks at half the count
+    
+    int length = string.length;
+    
+    
+    // Set flag to true until the check turns it to false
+    // Other way will involve more code ie setting flag to
+    // false and then setting it to true after every hit
+    BOOL palindrome = TRUE;
+    
+    
+    for (int i=0; i<length/2; i++) {
+        // Check if characters at various indexs are equal
+        if ([string characterAtIndex:i] != [string characterAtIndex:length-1-i]) {
+            return  palindrome = FALSE;
+        }
+    }
+    
+    return  palindrome;
+}
 
 enum TestNum {
     NumA= 1,
@@ -104,32 +130,20 @@ enum TestNum {
 }
 
 -(BOOL)checkPalindrom:(NSString*)string {
-
     int stringLength = string.length;
+    // We are checking every letter so we set the palindrome
+    // flag to true until the check is false
     BOOL palindrome = TRUE;
-    
+    // The number of iterations is half because we are taking 2 at a time
     for (int i=0; i<stringLength/2; i++) {
-        
+        // Using != instead of isEqualString because it is a char not a string
+        // The last integer will be charater length -1 (account for zero array index) and
+        // also subtract i to decrease the pointer after after iterations
         if ([string characterAtIndex:i] != [string characterAtIndex:string.length-i-1]) {
             return palindrome = FALSE;
         }
     }
-    
     return palindrome;
-}
-
--(void)testFizzBuzz {
-    for (int i=1; i<=100; i++) {
-        if (i%3==0 && i%5==0) {
-            NSLog(@"Fizz Buzz");
-        }else if (i%3==0) {
-            NSLog(@"Fizz");
-        }else if (i%5==0) {
-            NSLog(@"Buzz");
-        }else {
-            NSLog(@"%i", i);
-        }
-    }
 }
 
 -(void)runBlockSamples {
@@ -240,10 +254,61 @@ enum TestNum {
 }
 
 
+- (IBAction)showJSONClass:(id)sender {
+    
+    // Create three table view controllers and add to navigational controllers then add to
+    // a tab bar controller then push on top of navigational controller
+    
+    // First Table View Controller
+    TableViewController *allTableView = [[TableViewController alloc] init];
+    UINavigationController *allTableNav = [[UINavigationController alloc] initWithRootViewController:allTableView];
+    UITabBarItem *allTabBar = [[UITabBarItem alloc] initWithTitle:@"all" image:nil tag:1];
+    NSDictionary *titleAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:24 ]};
+    [allTabBar setTitleTextAttributes:titleAttributes forState:UIControlStateNormal];
+    [allTableNav setTabBarItem:allTabBar];
+    
+    // Second
+    TableViewController *textTableView = [[TableViewController alloc] init];
+    UINavigationController *textTableNav = [[UINavigationController alloc] initWithRootViewController:textTableView];
+    UITabBarItem *textTabBar = [[UITabBarItem alloc] initWithTitle:@"text" image:nil tag:1];
+    [textTabBar setTitleTextAttributes:titleAttributes forState:UIControlStateNormal];
+    [textTableNav setTabBarItem:textTabBar];
+    
+    // Third
+    TableViewController *imageTableView = [[TableViewController alloc] init];
+    UINavigationController *imageTableNav = [[UINavigationController alloc] initWithRootViewController:imageTableView];
+    UITabBarItem *imageTabBar = [[UITabBarItem alloc] initWithTitle:@"image" image:nil tag:1];
+    [imageTabBar setTitleTextAttributes:titleAttributes forState:UIControlStateNormal];
+    [imageTableNav setTabBarItem:imageTabBar];
 
-
-
+    NSArray *controllers = [NSArray arrayWithObjects:allTableNav, textTableNav, imageTableNav, nil];
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    [tabBar setViewControllers:controllers];
+    
+    [self.navigationController pushViewController:tabBar animated:YES];
+    
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
