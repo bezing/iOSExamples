@@ -13,6 +13,7 @@
 #import "Blocks.h"
 #import "TableViewController.h"
 #import "DataManager.h"
+#import "ViewControllerA.h"
 
 @interface ViewController ()
 
@@ -391,6 +392,14 @@ enum TestNum {
     b = c;
     
     NSLog(@"Before Swap A:%i  B:%i", a, b);
+}
+
+
+- (IBAction)showDataExchange:(id)sender {
+    
+    
+    ViewControllerA *vcA = (ViewControllerA*) [self.storyboard instantiateViewControllerWithIdentifier:@"ViewControllerA"];
+    [self.navigationController pushViewController:vcA animated:YES];
 }
 
 - (IBAction)showJSONClass:(id)sender {

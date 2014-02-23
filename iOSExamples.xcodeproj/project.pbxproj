@@ -11,10 +11,12 @@
 		60A4F04118B4527F00815029 /* Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F04018B4527F00815029 /* Blocks.m */; };
 		60A4F04718B7C66E00815029 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F04618B7C66E00815029 /* TableViewController.m */; };
 		60A4F04A18B7D4A600815029 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F04918B7D4A600815029 /* DataManager.m */; };
-		60A4F04E18B8259700815029 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4F04D18B8259700815029 /* SDWebImage.framework */; };
 		60A4F05018B8276100815029 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4F04F18B8276100815029 /* ImageIO.framework */; };
 		60A4F05918B9BC2400815029 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F05818B9BC2400815029 /* WebViewController.m */; };
 		60A4F05B18B9BC5400815029 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 60A4F05A18B9BC5400815029 /* Placeholder.png */; };
+		60A4F05F18BA79C600815029 /* ViewControllerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F05E18BA79C600815029 /* ViewControllerA.m */; };
+		60A4F06218BA79E600815029 /* ViewControllerB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F06118BA79E600815029 /* ViewControllerB.m */; };
+		60A4F06418BA7A1F00815029 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4F06318BA7A1F00815029 /* SDWebImage.framework */; };
 		60A6AAC7188FECD70077C74F /* Variables.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAC6188FECD70077C74F /* Variables.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
@@ -55,11 +57,15 @@
 		60A4F04818B7D4A600815029 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = iOSExamples/DataManager.h; sourceTree = "<group>"; };
 		60A4F04918B7D4A600815029 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = iOSExamples/DataManager.m; sourceTree = "<group>"; };
 		60A4F04B18B7D67200815029 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = iOSExamples/Constants.h; sourceTree = "<group>"; };
-		60A4F04D18B8259700815029 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		60A4F04F18B8276100815029 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		60A4F05718B9BC2400815029 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = iOSExamples/WebViewController.h; sourceTree = "<group>"; };
 		60A4F05818B9BC2400815029 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = iOSExamples/WebViewController.m; sourceTree = "<group>"; };
 		60A4F05A18B9BC5400815029 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Placeholder.png; path = iOSExamples/Placeholder.png; sourceTree = "<group>"; };
+		60A4F05D18BA79C600815029 /* ViewControllerA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerA.h; path = iOSExamples/ViewControllerA.h; sourceTree = "<group>"; };
+		60A4F05E18BA79C600815029 /* ViewControllerA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerA.m; path = iOSExamples/ViewControllerA.m; sourceTree = "<group>"; };
+		60A4F06018BA79E600815029 /* ViewControllerB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerB.h; path = iOSExamples/ViewControllerB.h; sourceTree = "<group>"; };
+		60A4F06118BA79E600815029 /* ViewControllerB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerB.m; path = iOSExamples/ViewControllerB.m; sourceTree = "<group>"; };
+		60A4F06318BA7A1F00815029 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = iOSExamples/SDWebImage.framework; sourceTree = "<group>"; };
 		60A6AAC5188FECD70077C74F /* Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variables.h; sourceTree = "<group>"; };
 		60A6AAC6188FECD70077C74F /* Variables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variables.m; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
@@ -95,8 +101,8 @@
 			files = (
 				60E28D81186E182F00D9E723 /* CoreGraphics.framework in Frameworks */,
 				60A4F05018B8276100815029 /* ImageIO.framework in Frameworks */,
-				60A4F04E18B8259700815029 /* SDWebImage.framework in Frameworks */,
 				60E28D83186E182F00D9E723 /* UIKit.framework in Frameworks */,
+				60A4F06418BA7A1F00815029 /* SDWebImage.framework in Frameworks */,
 				60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,7 +161,7 @@
 		60A4F04C18B8258200815029 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60A4F04D18B8259700815029 /* SDWebImage.framework */,
+				60A4F06318BA7A1F00815029 /* SDWebImage.framework */,
 			);
 			name = frameworks;
 			sourceTree = "<group>";
@@ -166,6 +172,17 @@
 				60A4F05A18B9BC5400815029 /* Placeholder.png */,
 			);
 			name = resources;
+			sourceTree = "<group>";
+		};
+		60A4F05C18BA799300815029 /* Data Communication */ = {
+			isa = PBXGroup;
+			children = (
+				60A4F05D18BA79C600815029 /* ViewControllerA.h */,
+				60A4F05E18BA79C600815029 /* ViewControllerA.m */,
+				60A4F06018BA79E600815029 /* ViewControllerB.h */,
+				60A4F06118BA79E600815029 /* ViewControllerB.m */,
+			);
+			name = "Data Communication";
 			sourceTree = "<group>";
 		};
 		60A6AAC8189C3E2A0077C74F /* MultiThreading */ = {
@@ -180,6 +197,7 @@
 		60E28D72186E182F00D9E723 = {
 			isa = PBXGroup;
 			children = (
+				60A4F05C18BA799300815029 /* Data Communication */,
 				60A4F04318B7C51F00815029 /* MISC */,
 				60A4F00318A58C0400815029 /* Callbacks */,
 				60A6AAC8189C3E2A0077C74F /* MultiThreading */,
@@ -364,6 +382,8 @@
 				60E28DB8186E185000D9E723 /* Arrays.m in Sources */,
 				60A4F04718B7C66E00815029 /* TableViewController.m in Sources */,
 				60AE19771873EEA100A08947 /* Operators.m in Sources */,
+				60A4F06218BA79E600815029 /* ViewControllerB.m in Sources */,
+				60A4F05F18BA79C600815029 /* ViewControllerA.m in Sources */,
 				60A6AAC7188FECD70077C74F /* Variables.m in Sources */,
 				60E28D8F186E182F00D9E723 /* AppDelegate.m in Sources */,
 				60E28D8B186E182F00D9E723 /* main.m in Sources */,
@@ -508,6 +528,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mikechen/Desktop/iOSExamples,
+					/Users/mikechen/Desktop/iOSExamples/iOSExamples,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSExamples/iOSExamples-Prefix.pch";
@@ -527,6 +548,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mikechen/Desktop/iOSExamples,
+					/Users/mikechen/Desktop/iOSExamples/iOSExamples,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSExamples/iOSExamples-Prefix.pch";
