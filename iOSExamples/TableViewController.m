@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "WebViewController.h"
 
 @interface TableViewController ()
 
@@ -28,8 +29,6 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"Table View Did Load");
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -86,11 +85,10 @@
     return cell;
 }
 
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Did select");
+    WebViewController *wvc = [[WebViewController alloc] init];
+    [self.navigationController pushViewController:wvc animated:YES];
 }
 
 /*

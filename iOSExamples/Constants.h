@@ -9,3 +9,4 @@
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #define kFuzzURL [NSURL URLWithString: @"http://dev.fuzzproductions.com/MobileTest/test.json"]
+#define kFuzzWebsite @"http://fuzzproductions.com/mobile/"

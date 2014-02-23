@@ -13,7 +13,8 @@
 		60A4F04A18B7D4A600815029 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F04918B7D4A600815029 /* DataManager.m */; };
 		60A4F04E18B8259700815029 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4F04D18B8259700815029 /* SDWebImage.framework */; };
 		60A4F05018B8276100815029 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4F04F18B8276100815029 /* ImageIO.framework */; };
-		60A4F05618B9B2B800815029 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 60A4F05518B9B2B800815029 /* Placeholder.png */; };
+		60A4F05918B9BC2400815029 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F05818B9BC2400815029 /* WebViewController.m */; };
+		60A4F05B18B9BC5400815029 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 60A4F05A18B9BC5400815029 /* Placeholder.png */; };
 		60A6AAC7188FECD70077C74F /* Variables.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAC6188FECD70077C74F /* Variables.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
@@ -56,7 +57,9 @@
 		60A4F04B18B7D67200815029 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = iOSExamples/Constants.h; sourceTree = "<group>"; };
 		60A4F04D18B8259700815029 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		60A4F04F18B8276100815029 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		60A4F05518B9B2B800815029 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placeholder.png; sourceTree = "<group>"; };
+		60A4F05718B9BC2400815029 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = iOSExamples/WebViewController.h; sourceTree = "<group>"; };
+		60A4F05818B9BC2400815029 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = iOSExamples/WebViewController.m; sourceTree = "<group>"; };
+		60A4F05A18B9BC5400815029 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Placeholder.png; path = iOSExamples/Placeholder.png; sourceTree = "<group>"; };
 		60A6AAC5188FECD70077C74F /* Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variables.h; sourceTree = "<group>"; };
 		60A6AAC6188FECD70077C74F /* Variables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variables.m; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				60A4F04818B7D4A600815029 /* DataManager.h */,
 				60A4F04918B7D4A600815029 /* DataManager.m */,
 				60A4F04B18B7D67200815029 /* Constants.h */,
+				60A4F05718B9BC2400815029 /* WebViewController.h */,
+				60A4F05818B9BC2400815029 /* WebViewController.m */,
 			);
 			name = "JSON tab";
 			sourceTree = "<group>";
@@ -158,7 +163,7 @@
 		60A4F05418B9B2AA00815029 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				60A4F05518B9B2B800815029 /* Placeholder.png */,
+				60A4F05A18B9BC5400815029 /* Placeholder.png */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -328,7 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60A4F05618B9B2B800815029 /* Placeholder.png in Resources */,
+				60A4F05B18B9BC5400815029 /* Placeholder.png in Resources */,
 				60E28D95186E182F00D9E723 /* Main_iPad.storyboard in Resources */,
 				60E28D9A186E182F00D9E723 /* Images.xcassets in Resources */,
 				60E28D92186E182F00D9E723 /* Main_iPhone.storyboard in Resources */,
@@ -353,6 +358,7 @@
 			files = (
 				60E28D98186E182F00D9E723 /* ViewController.m in Sources */,
 				60A4F04A18B7D4A600815029 /* DataManager.m in Sources */,
+				60A4F05918B9BC2400815029 /* WebViewController.m in Sources */,
 				60A4F03E18B4527100815029 /* GCDViewController.m in Sources */,
 				60A4F04118B4527F00815029 /* Blocks.m in Sources */,
 				60E28DB8186E185000D9E723 /* Arrays.m in Sources */,
