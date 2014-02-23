@@ -12,6 +12,7 @@
 #import "Variables.h"
 #import "Blocks.h"
 #import "TableViewController.h"
+#import "DataManager.h"
 
 @interface ViewController ()
 
@@ -253,7 +254,6 @@ enum TestNum {
     
 }
 
-
 - (IBAction)showJSONClass:(id)sender {
     
     // Create three table view controllers and add to navigational controllers then add to
@@ -286,8 +286,35 @@ enum TestNum {
     [tabBar setViewControllers:controllers];
     
     [self.navigationController pushViewController:tabBar animated:YES];
+
+    /* Load our json data and pass it to our table view controllers
+     
+    Perfect use of blocks here. After the download is complete you want
+    to add the data to our tvcs and reload all the tables as well.
+    IE you want our data manager to call us back here, hence we are 
+    creating the callback block here. 
+    -You can also use delegation here, after the download data manager
+     can call it's delegate, us to add data to delegate and reload. 
+     All the call back methods would be defined here like the blocks
+    -These examples are how these objects communicate and pass data 
+     between each other.
+     */
     
+    DataManager *dataManager = [DataManager dataManager];
+    
+    [dataManager loadJSONDataWithCompletionBlock:^{
+        // Pass the data once the download is complete
+        allTableView.jsonDataArray = dataManager.allDataArray;
+        textTableView.jsonDataArray = dataManager.textDataArray;
+        imageTableView.jsonDataArray = dataManager.imageDataArray;
+        
+        // Reload the table as well
+        [allTableView.tableView reloadData];
+        [textTableView.tableView reloadData];
+        [imageTableView.tableView reloadData];
+    }];
 }
+
 @end
 
 

@@ -10,4 +10,7 @@
 
 @interface TableViewController : UITableViewController
 
+@property (nonatomic, readwrite) NSArray *jsonDataArray;
+@property (nonatomic, strong) UIImage *image;
+
 @end
