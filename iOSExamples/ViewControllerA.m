@@ -29,8 +29,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self registerForNotifications];
     
     NSLog(@"A loaded");
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +48,19 @@
     ViewControllerB *vcB = (ViewControllerB *)[self.storyboard instantiateViewControllerWithIdentifier:@"ViewControllerB"];
     [self passDataToViewController:vcB];
     [self.navigationController pushViewController:vcB animated:YES];
+}
+
+-(void)registerForNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(respondToDataNotifications:)
+                                                 name:@"DataB"
+                                               object:nil];
+}
+
+-(void)respondToDataNotifications:(NSNotification*)notification {
+    NSDictionary *info = notification.userInfo;
+    NSString *stringValue = [info objectForKey:@"stringValue"];
+    NSLog(@"NOTIFICATION in A: %@", stringValue);
 }
 
 -(void)passDataToViewController:(ViewControllerB*)vcB {

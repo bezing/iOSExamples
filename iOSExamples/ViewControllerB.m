@@ -38,6 +38,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sendNotificationData:(id)sender {
+    NSString *stringValue = @"Data passed from B passed through NSNotifications";
+    NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:stringValue,@"stringValue", nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"DataB" object:self userInfo:info];
+}
 
 -(void)passingData:(NSString *)dataString {
     self.methodString = dataString;
