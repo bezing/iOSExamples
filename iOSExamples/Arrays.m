@@ -35,6 +35,14 @@
     }    
 }
 
++(NSArray*)create2DArrays {
+    // Short hand wat to create 2D arrays with @
+    NSArray *array2D = @[@[@"1",@"2", @"3"],
+                         @[@"4",@"5",@"6"],
+                         @[@"7",@"8",@"9"]];
+    return array2D;
+}
+
 -(void)createArrays {
     
     // Regular Immutable Arrays
@@ -52,6 +60,11 @@
         NSLog(@"%@", stringObject);
     }
     
+    // Shorthand way to create arrays
+    NSArray *multipleArrays = @[@"one", @"two", @"three"];
+    for (NSString *stringObject in multipleArrays) {
+        NSLog(@"%@", stringObject);
+    }
 }
 
 @end

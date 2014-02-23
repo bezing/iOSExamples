@@ -136,7 +136,7 @@
 			name = MISC;
 			sourceTree = "<group>";
 		};
-		60A4F04418B7C55B00815029 /* JSON tab */ = {
+		60A4F04418B7C55B00815029 /* JSON  */ = {
 			isa = PBXGroup;
 			children = (
 				60A4F05418B9B2AA00815029 /* resources */,
@@ -145,11 +145,11 @@
 				60A4F04618B7C66E00815029 /* TableViewController.m */,
 				60A4F04818B7D4A600815029 /* DataManager.h */,
 				60A4F04918B7D4A600815029 /* DataManager.m */,
-				60A4F04B18B7D67200815029 /* Constants.h */,
 				60A4F05718B9BC2400815029 /* WebViewController.h */,
 				60A4F05818B9BC2400815029 /* WebViewController.m */,
+				60A4F04B18B7D67200815029 /* Constants.h */,
 			);
-			name = "JSON tab";
+			name = "JSON ";
 			sourceTree = "<group>";
 		};
 		60A4F04C18B8258200815029 /* frameworks */ = {
@@ -183,7 +183,7 @@
 				60A4F04318B7C51F00815029 /* MISC */,
 				60A4F00318A58C0400815029 /* Callbacks */,
 				60A6AAC8189C3E2A0077C74F /* MultiThreading */,
-				60A4F04418B7C55B00815029 /* JSON tab */,
+				60A4F04418B7C55B00815029 /* JSON  */,
 				60E28D84186E182F00D9E723 /* Examples */,
 				60E28DA6186E182F00D9E723 /* iOSExamplesTests */,
 				60E28D7D186E182F00D9E723 /* Frameworks */,

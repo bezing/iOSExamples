@@ -13,5 +13,6 @@
 -(void)createStrings;
 -(void)printArray;
 -(void)createArrays;
++(NSArray*)create2DArrays;
 
 @end

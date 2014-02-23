@@ -32,9 +32,138 @@
    // [self runDailyLineOfCode];
     
     
-   BOOL isPalindrome =  [self checkStringIsPalindrome:@"CAC"];
-    NSLog(isPalindrome ? @"TRUE" : @"FALSE");
+   //BOOL isPalindrome =  [self checkStringIsPalindrome:@"CAC"];
+   // NSLog(isPalindrome ? @"TRUE" : @"FALSE");
+   
+    /* Fuzz swap
+    int a = 5;
+    int b = 7;
+    [self swapInt:a With:b];
+    */
     
+   // [self runFuzzTest];
+}
+
+-(void)runFuzzTest {
+    
+//    int a = 50;
+//    if (a>10 && a<40) {
+//        NSLog(@"TRUE");
+//    }else {
+//        NSLog(@"False");
+//    }
+    
+    // Check if first 4 letters of string is Equal to Http
+    /* The algo is use a iteration to run four times to 
+     check first 4 char, assume flag is true until one
+     of the characters is not, then break from the iteration
+     very important to break, otherwise it can set to true
+     on the last check
+    */
+    NSString *string = @"Http";
+    BOOL equal = TRUE;
+    for (int i=1; i<=4; i++) {
+        char firstChar = [string characterAtIndex:0];
+        char secondChar = [string characterAtIndex:1];
+        char thirdChar = [string characterAtIndex:2];
+        char fourthChar = [string characterAtIndex:3];
+
+        if (firstChar != 'H') {
+            equal = false;
+            break;
+        }
+        if (secondChar != 't') {
+            equal = false;
+            break;
+        }
+        if (thirdChar != 't') {
+            equal = false;
+            break;
+        }
+        if (fourthChar != 'p') {
+            equal = false;
+            break;
+        }
+    }
+    NSString *isStringEqual = equal ? @"TRUE" : @"FALSE";
+   // NSLog(@"String is equal to Http: %@", isStringEqual);
+    
+
+    
+    
+    // Print the number inside the 2D arrays in various ways
+    NSArray *sample2DArray = @[@[@"1",@"2",@"3"],
+                               @[@"4",@"5",@"6"],
+                               @[@"7",@"8",@"9"]];
+    //NSArray *array2D = [Arrays create2DArrays];
+    NSArray *array2D = sample2DArray;
+
+    
+    /* Print the array in sequential order
+     Algo: If you are iterating the array in sequential order, use
+     forin loop. When you start examine closely how the array is structured
+     We have a array inside another array. Forin means what's the object
+     inside the array. Once you have it print it out.
+    */
+    for (NSArray *innerArray in array2D) {
+        for (NSString *stringNum in innerArray) {
+           // NSLog(@"%@", stringNum);
+        }
+    }
+
+    /*Print the array backwards
+     Algo: We are not looping in order so we can't use forin. Must use
+     regular for loop to control the order of the loop, in this case
+     we want to start from the last to the first.
+     Find the length of the array and use that to initialize the i
+     value but we use the i value to test and out in objectAtIndex, we
+     do not change or use the outerArrayLength for anything else.
+     Also decrease the length of the array length by 1 because the
+     array length will be 3 but the array index will be 2 instead
+    */
+    int outerArrayLength = sample2DArray.count-1;
+    for (int x=outerArrayLength; x>=0; x--) {
+        NSArray *innerArray = [sample2DArray objectAtIndex:x];
+        int innerArrayLength = innerArray.count-1;
+        for (int y = innerArrayLength; y>=0; y--) {
+            NSString *stringNum = [innerArray objectAtIndex:y];
+            //NSLog(@"%@", stringNum);
+        }
+    }
+    
+    
+    /* Print the columns  
+     @[@[@"1",@"2",@"3"],
+       @[@"4",@"5",@"6"],
+       @[@"7",@"8",@"9"]];
+     
+     Look at it closely, follow the loop algo. We need to iterate the arrays and print
+     out the first values, then iterate again to print out the second value, then 
+     iterate again to print out the third value. Use a outer for loop to loop three
+     times and to use the index flag of i and inside the forin loop to give use the
+     inner arrays inside the 2d array
+    
+    */
+    
+    for (int i =0; i<3; i++) {
+        for (NSArray *innerArray in sample2DArray) {
+            NSString *stringNum = [innerArray objectAtIndex:i];
+            NSLog(@"%@", stringNum);
+        }
+    }
+    
+    // Same as above but no need to loop inside the inner array
+    /*
+    for (int i=0; i<3; i++) {
+        for (NSArray *innerArray in sample2DArray) {
+            for (NSString *stringNum in innerArray) {
+                NSString *stringValue = [innerArray objectAtIndex:i];
+                NSLog(@"uu %@", stringValue);
+                break; // Break because we only need one value, not all the values of the loop
+            }
+        }
+    }
+    */
 
 }
 
@@ -116,18 +245,15 @@ enum TestNum {
        // NSLog(@"%@", stringObject);
     }
     
-    
     for (int i = 20; i>0; i--) {
         //NSLog(@"%i", i);
     }
-    
-    
+
     int sampleInt = 0;
     while (sampleInt < 100) {
         sampleInt +=10;
         NSLog(@"%i", sampleInt);
     }
-    
 }
 
 -(BOOL)checkPalindrom:(NSString*)string {
@@ -251,7 +377,20 @@ enum TestNum {
     [operator checkTernaryOperator];
     
     Variables *variables = [[Variables alloc] init];
+}
+
+-(void)swapInt:(int)firstInt With:(int)secondInt {
+    int a = firstInt;
+    int b = secondInt;
+    int c = 0;
     
+    NSLog(@"Before Swap A:%i  B:%i", a, b);
+    
+    c = a;
+    a = b;
+    b = c;
+    
+    NSLog(@"Before Swap A:%i  B:%i", a, b);
 }
 
 - (IBAction)showJSONClass:(id)sender {
