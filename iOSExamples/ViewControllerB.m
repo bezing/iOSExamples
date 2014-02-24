@@ -39,6 +39,7 @@
 }
 
 - (IBAction)sendNotificationData:(id)sender {
+    // Pass a dictionary with a string object through NSNotification 
     NSString *stringValue = @"Data passed from B passed through NSNotifications";
     NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:stringValue,@"stringValue", nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DataB" object:self userInfo:info];

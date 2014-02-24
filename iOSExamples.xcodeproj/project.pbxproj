@@ -17,6 +17,7 @@
 		60A4F05F18BA79C600815029 /* ViewControllerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F05E18BA79C600815029 /* ViewControllerA.m */; };
 		60A4F06218BA79E600815029 /* ViewControllerB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F06118BA79E600815029 /* ViewControllerB.m */; };
 		60A4F06418BA7A1F00815029 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4F06318BA7A1F00815029 /* SDWebImage.framework */; };
+		60A4F06718BBD42F00815029 /* KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F06618BBD42F00815029 /* KVC.m */; };
 		60A6AAC7188FECD70077C74F /* Variables.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAC6188FECD70077C74F /* Variables.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
@@ -66,6 +67,8 @@
 		60A4F06018BA79E600815029 /* ViewControllerB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerB.h; path = iOSExamples/ViewControllerB.h; sourceTree = "<group>"; };
 		60A4F06118BA79E600815029 /* ViewControllerB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerB.m; path = iOSExamples/ViewControllerB.m; sourceTree = "<group>"; };
 		60A4F06318BA7A1F00815029 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = iOSExamples/SDWebImage.framework; sourceTree = "<group>"; };
+		60A4F06518BBD42F00815029 /* KVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVC.h; path = iOSExamples/KVC.h; sourceTree = "<group>"; };
+		60A4F06618BBD42F00815029 /* KVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVC.m; path = iOSExamples/KVC.m; sourceTree = "<group>"; };
 		60A6AAC5188FECD70077C74F /* Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variables.h; sourceTree = "<group>"; };
 		60A6AAC6188FECD70077C74F /* Variables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variables.m; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 			children = (
 				60A4F03F18B4527F00815029 /* Blocks.h */,
 				60A4F04018B4527F00815029 /* Blocks.m */,
+				60A4F06518BBD42F00815029 /* KVC.h */,
+				60A4F06618BBD42F00815029 /* KVC.m */,
 			);
 			name = Callbacks;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				60A4F04A18B7D4A600815029 /* DataManager.m in Sources */,
 				60A4F05918B9BC2400815029 /* WebViewController.m in Sources */,
 				60A4F03E18B4527100815029 /* GCDViewController.m in Sources */,
+				60A4F06718BBD42F00815029 /* KVC.m in Sources */,
 				60A4F04118B4527F00815029 /* Blocks.m in Sources */,
 				60E28DB8186E185000D9E723 /* Arrays.m in Sources */,
 				60A4F04718B7C66E00815029 /* TableViewController.m in Sources */,

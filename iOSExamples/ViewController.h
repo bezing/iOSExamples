@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KVC.h"
 
 @interface ViewController : UIViewController
+
+@property (nonatomic) KVC *characterKVC;
 
 - (IBAction)showJSONClass:(id)sender;
 @end

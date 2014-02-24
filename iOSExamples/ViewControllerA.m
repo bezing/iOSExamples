@@ -58,6 +58,7 @@
 }
 
 -(void)respondToDataNotifications:(NSNotification*)notification {
+    // Data dictionary has been passed from B to A
     NSDictionary *info = notification.userInfo;
     NSString *stringValue = [info objectForKey:@"stringValue"];
     NSLog(@"NOTIFICATION in A: %@", stringValue);

@@ -14,6 +14,7 @@
 #import "TableViewController.h"
 #import "DataManager.h"
 #import "ViewControllerA.h"
+#import "KVC.h"
 
 @interface ViewController ()
 
@@ -43,6 +44,50 @@
     */
     
    // [self runFuzzTest];
+    
+    [self runKeyValueTest];
+}
+
+// Event is called, since we add ourselves as an observer, when the values change
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"characterName"]) {
+        NSString *oldName = [change objectForKey:@"old"];
+        NSString *newcharacterName = [change objectForKey:@"new"];
+        NSLog(@"Old name: %@ New name is: %@", oldName, newcharacterName);
+    }
+    
+    if ([keyPath isEqualToString:@"characterLife"]) {
+        int oldCharacterLife = [[change objectForKey:@"old"] intValue];
+        int newCharacterLife = [[change objectForKey:@"new"] intValue];
+        NSLog(@"Old life: %i New life is: %i", oldCharacterLife, newCharacterLife);
+    }
+}
+
+// Change the values for the key value object
+- (IBAction)testKeyValuePressed:(id)sender {
+    [self.characterKVC setValue:@"Rick" forKey:@"characterName"];
+    [self.characterKVC setValue:[NSNumber numberWithInt:10] forKey:@"characterLife"];
+}
+
+-(void)runKeyValueTest {
+    // Use key value coding / KVC to set values for the properties
+    self.characterKVC = [[KVC alloc] init];
+    // character name and character life must be property values of object KVC
+    [self.characterKVC setValue:@"Mike" forKey:@"characterName"];
+    [self.characterKVC setValue:[NSNumber numberWithInt:5] forKey:@"characterLife"];
+    
+    NSString *stringName = [self.characterKVC valueForKey:@"characterName"];
+    int characterLife = [[self.characterKVC valueForKey:@"characterLife"] integerValue];
+    NSLog(@"Character name is %@ and life is %i", stringName, characterLife);
+    
+    // Add this object as an observer, with KVO, of the KVC object
+    [self.characterKVC addObserver:self forKeyPath:@"characterName"
+                      options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      context:nil];
+    [self.characterKVC addObserver:self
+                   forKeyPath:@"characterLife"
+                      options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      context:nil];
 }
 
 -(void)runFuzzTest {
