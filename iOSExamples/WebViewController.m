@@ -33,7 +33,7 @@
     UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:kFuzzWebsite]];
     [webView loadRequest:request];
-    webView.scalesPageToFit = YES;
+    [self.view addSubview:webView];
 }
 
 - (void)didReceiveMemoryWarning
