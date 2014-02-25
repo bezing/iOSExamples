@@ -13,5 +13,7 @@
 
 @property (nonatomic) KVC *characterKVC;
 
+@property (nonatomic, readwrite) NSString *stringBlockValue;
+
 - (IBAction)showJSONClass:(id)sender;
 @end

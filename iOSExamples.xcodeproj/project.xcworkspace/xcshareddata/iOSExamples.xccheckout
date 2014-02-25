@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F987244F-97E5-49CA-BB83-14DE00996DC3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOSExamples</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7BFE7B60-4496-49E6-BC53-913956FDDCF3</key>
+		<string>https://github.com/mchen3/iOSExamples.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOSExamples.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7BFE7B60-4496-49E6-BC53-913956FDDCF3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mchen3/iOSExamples.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7BFE7B60-4496-49E6-BC53-913956FDDCF3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7BFE7B60-4496-49E6-BC53-913956FDDCF3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSExamples</string>
+		</dict>
+	</array>
+</dict>
+</plist>

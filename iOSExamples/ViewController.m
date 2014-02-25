@@ -29,7 +29,7 @@
     
    // [self testClasses];
     
-   // [self runBlockSamples];
+    [self runBlockSamples];
 
    // [self runDailyLineOfCode];
     
@@ -45,11 +45,19 @@
     
    // [self runFuzzTest];
     
-    [self runKeyValueTest];
+   // [self runKeyValueTest];
+}
+
+-(void)dealloc {
+    [self removeObserver:self forKeyPath:@"characterName"];
+    [self removeObserver:self forKeyPath:@"characterLife"];
+    
 }
 
 // Event is called, since we add ourselves as an observer, when the values change
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+    // Can compare old and new values to only cll a method when it's changed
     if ([keyPath isEqualToString:@"characterName"]) {
         NSString *oldName = [change objectForKey:@"old"];
         NSString *newcharacterName = [change objectForKey:@"new"];
@@ -300,6 +308,8 @@ enum TestNum {
         sampleInt +=10;
         NSLog(@"%i", sampleInt);
     }
+    
+    
 }
 
 -(BOOL)checkPalindrom:(NSString*)string {
@@ -396,6 +406,31 @@ enum TestNum {
             *stop = TRUE;
         }
     }];
+    
+    
+    /* Test method with multiple parameters, one being a id obj and another being a block
+       with parameter string and bool values
+       
+        We will pass a object reference for ourself (as an example) to the block and    
+        the implementation or callback is we will change the value of the string property
+        if the completionHandler is successful
+    */
+    self.stringBlockValue = @"String in original class";
+    NSLog(@"%@", self.stringBlockValue);
+    
+    [self methodInAnotherClss:self
+       completionHandlerBlock:^(id obj, BOOL *success, BOOL *failure) {
+           // Must use reference pointer otherwise using 'success' will incur
+           // wrong value because the parameter is a reference and not a primitive
+           ViewController *vc = (ViewController*)obj;
+           if (*success) {
+               vc.stringBlockValue = @"New String Val in success block";
+           }
+           else {
+               NSLog(@"FAILURE");
+           }
+           NSLog(@"Value is: %@", vc.stringBlockValue);
+       }];
 }
 
 -(void)runBlock:(void(^)(int number, bool *stop))block{
@@ -410,6 +445,31 @@ enum TestNum {
             break;
         }
     }
+}
+
+-(void)methodInAnotherClss:(id)obj
+    completionHandlerBlock:(void(^)(id obj, BOOL *success, BOOL *failure))block  {
+    
+    // Flip flop success and failure values to test success and error handling
+    BOOL success = TRUE;
+    BOOL failure = FALSE;
+    
+    if (success) {
+        //ViewController *objectInAnotherClass = (ViewController*)obj;
+        //objectInAnotherClass.stringBlockValue = @"Block value in another class";
+        block(self, &success, &failure);
+    }
+    
+    if (failure) {
+        block(Nil, &success, &failure);
+    }
+    
+    /*
+      NOTE about using the BOOL value here. We start off defining a BOOL value here and 
+     we use the bool as a flag check, when we use the block we send off the address of
+     primitive because we are passing a reference for the parameter of the BOOL and
+     to use it later inside the block we use * to reference the value
+    */
 }
 
 -(void)testClasses {
