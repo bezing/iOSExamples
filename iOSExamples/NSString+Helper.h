@@ -10,6 +10,8 @@
 
 @interface NSString (Helper)
 
+@property (nonatomic, readonly) NSString *stringVal;
+
 -(BOOL)isBlank;
 -(void)printString;
 

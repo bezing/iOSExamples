@@ -22,7 +22,11 @@
 }
 
 -(void)printString {
-    NSLog(@"%@", self);
+    
+    self.stringVal = @"HEl";
+    
+    
+    NSLog(@" %@   %@", self, self.stringVal);
 }
 
 @end
