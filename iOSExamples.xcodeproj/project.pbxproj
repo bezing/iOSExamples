@@ -19,6 +19,7 @@
 		60A4F06418BA7A1F00815029 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4F06318BA7A1F00815029 /* SDWebImage.framework */; };
 		60A4F06718BBD42F00815029 /* KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F06618BBD42F00815029 /* KVC.m */; };
 		60A6AAC7188FECD70077C74F /* Variables.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAC6188FECD70077C74F /* Variables.m */; };
+		60A9875E18BD24F5009197A0 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A9875D18BD24F5009197A0 /* NSString+Helper.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
 		60E28D81186E182F00D9E723 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D80186E182F00D9E723 /* CoreGraphics.framework */; };
@@ -71,6 +72,8 @@
 		60A4F06618BBD42F00815029 /* KVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVC.m; path = iOSExamples/KVC.m; sourceTree = "<group>"; };
 		60A6AAC5188FECD70077C74F /* Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variables.h; sourceTree = "<group>"; };
 		60A6AAC6188FECD70077C74F /* Variables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variables.m; sourceTree = "<group>"; };
+		60A9875C18BD24F5009197A0 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Helper.h"; path = "iOSExamples/NSString+Helper.h"; sourceTree = "<group>"; };
+		60A9875D18BD24F5009197A0 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Helper.m"; path = "iOSExamples/NSString+Helper.m"; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
 		60AE19761873EEA100A08947 /* Operators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operators.m; sourceTree = "<group>"; };
 		60E28D7B186E182F00D9E723 /* iOSExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,9 +202,19 @@
 			name = MultiThreading;
 			sourceTree = "<group>";
 		};
+		60A9875B18BD24CE009197A0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				60A9875C18BD24F5009197A0 /* NSString+Helper.h */,
+				60A9875D18BD24F5009197A0 /* NSString+Helper.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		60E28D72186E182F00D9E723 = {
 			isa = PBXGroup;
 			children = (
+				60A9875B18BD24CE009197A0 /* Utility */,
 				60A4F05C18BA799300815029 /* Data Communication */,
 				60A4F04318B7C51F00815029 /* MISC */,
 				60A4F00318A58C0400815029 /* Callbacks */,
@@ -384,6 +397,7 @@
 				60A4F05918B9BC2400815029 /* WebViewController.m in Sources */,
 				60A4F03E18B4527100815029 /* GCDViewController.m in Sources */,
 				60A4F06718BBD42F00815029 /* KVC.m in Sources */,
+				60A9875E18BD24F5009197A0 /* NSString+Helper.m in Sources */,
 				60A4F04118B4527F00815029 /* Blocks.m in Sources */,
 				60E28DB8186E185000D9E723 /* Arrays.m in Sources */,
 				60A4F04718B7C66E00815029 /* TableViewController.m in Sources */,

@@ -15,6 +15,7 @@
 #import "DataManager.h"
 #import "ViewControllerA.h"
 #import "KVC.h"
+#import "NSString+Helper.h"
 
 @interface ViewController ()
 
@@ -29,7 +30,7 @@
     
    // [self testClasses];
     
-    [self runBlockSamples];
+   // [self runBlockSamples];
 
    // [self runDailyLineOfCode];
     
@@ -46,12 +47,24 @@
    // [self runFuzzTest];
     
    // [self runKeyValueTest];
+    
+    [self testCategories];
+}
+
+-(void)testCategories {
+    
+    // Use NSString+Helper category
+    NSString *blankString = @"";
+    NSLog([blankString isBlank] ? @"Blank" : @"String has character");
+    NSString *stringValue = @"SCSd";
+    NSLog([stringValue isBlank] ? @"Blank" : @"String has character");
+    
+    [stringValue printString];
 }
 
 -(void)dealloc {
     [self removeObserver:self forKeyPath:@"characterName"];
     [self removeObserver:self forKeyPath:@"characterLife"];
-    
 }
 
 // Event is called, since we add ourselves as an observer, when the values change

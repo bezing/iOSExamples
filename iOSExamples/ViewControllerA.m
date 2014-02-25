@@ -24,6 +24,11 @@
     return self;
 }
 
+/*  ViewControllerA and ViewController will show various ways classes can communicate with each other.
+    Data forward is properties and segues. Data backwards is blocks,delegation (use od protocols, and 
+    NSNotifications
+*/
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
