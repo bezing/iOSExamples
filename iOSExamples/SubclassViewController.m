@@ -41,7 +41,7 @@
     you cannot overwrite static methods
  */
 +(void)testClassMethods {
-    NSLog(@"Subclass overwriting class methods");
+    //NSLog(@"Subclass overwriting class methods");
 }
 
 @end

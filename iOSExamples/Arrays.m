@@ -46,13 +46,15 @@
 -(void)createArrays {
     
     // Regular Immutable Arrays
-    NSArray *inmutArray = [NSArray arrayWithObjects:@"one", @"two", @"three", nil];
+    NSArray *inmutArray = [NSArray arrayWithObjects:@"zxzx one", @"two", @"three", nil];
     for (int i=0; i< inmutArray.count; i++) {
-        NSLog(@"%@", [inmutArray objectAtIndex:i]);
+//      NSLog(@"%@", [inmutArray objectAtIndex:i]);
+        NSLog(@"%@", inmutArray[i]); // faster way
     }
     
     // Mutable Arrays
-    NSMutableArray *mutArray = [[NSMutableArray alloc] init];
+    //NSMutableArray *mutArray = [[NSMutableArray alloc] init];
+    NSMutableArray *mutArray = [NSMutableArray array]; // faster way
     [mutArray addObject:@"four"];
     [mutArray addObject:@"five"];
     [mutArray addObject:@"six"];

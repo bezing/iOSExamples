@@ -20,6 +20,7 @@
 		60A4F06718BBD42F00815029 /* KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A4F06618BBD42F00815029 /* KVC.m */; };
 		60A6AAC7188FECD70077C74F /* Variables.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAC6188FECD70077C74F /* Variables.m */; };
 		60A9875E18BD24F5009197A0 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A9875D18BD24F5009197A0 /* NSString+Helper.m */; };
+		60AB045B18BE7FE000F66DEF /* NSPredicateClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AB045A18BE7FE000F66DEF /* NSPredicateClass.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60AFC64718BD91A200A3EB79 /* SubclassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFC64618BD91A200A3EB79 /* SubclassViewController.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
@@ -75,6 +76,8 @@
 		60A6AAC6188FECD70077C74F /* Variables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variables.m; sourceTree = "<group>"; };
 		60A9875C18BD24F5009197A0 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Helper.h"; path = "iOSExamples/NSString+Helper.h"; sourceTree = "<group>"; };
 		60A9875D18BD24F5009197A0 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Helper.m"; path = "iOSExamples/NSString+Helper.m"; sourceTree = "<group>"; };
+		60AB045918BE7FE000F66DEF /* NSPredicateClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSPredicateClass.h; path = iOSExamples/NSPredicateClass.h; sourceTree = "<group>"; };
+		60AB045A18BE7FE000F66DEF /* NSPredicateClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSPredicateClass.m; path = iOSExamples/NSPredicateClass.m; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
 		60AE19761873EEA100A08947 /* Operators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operators.m; sourceTree = "<group>"; };
 		60AFC64518BD91A200A3EB79 /* SubclassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubclassViewController.h; path = iOSExamples/SubclassViewController.h; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 			children = (
 				60A9875C18BD24F5009197A0 /* NSString+Helper.h */,
 				60A9875D18BD24F5009197A0 /* NSString+Helper.m */,
+				60AB045918BE7FE000F66DEF /* NSPredicateClass.h */,
+				60AB045A18BE7FE000F66DEF /* NSPredicateClass.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 				60A4F06218BA79E600815029 /* ViewControllerB.m in Sources */,
 				60A4F05F18BA79C600815029 /* ViewControllerA.m in Sources */,
 				60A6AAC7188FECD70077C74F /* Variables.m in Sources */,
+				60AB045B18BE7FE000F66DEF /* NSPredicateClass.m in Sources */,
 				60E28D8F186E182F00D9E723 /* AppDelegate.m in Sources */,
 				60E28D8B186E182F00D9E723 /* main.m in Sources */,
 			);

@@ -16,6 +16,7 @@
 #import "ViewControllerA.h"
 #import "KVC.h"
 #import "NSString+Helper.h"
+#import "NSPredicateClass.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-   // [self testClasses];
+  // [self testClasses];
     
    // [self runBlockSamples];
 
@@ -52,6 +53,14 @@
     
   //  [ViewController testClassMethods];
     
+    [self testPredicateClass];
+    
+}
+
+
+-(void)testPredicateClass {
+    NSPredicateClass *predicateClass = [[NSPredicateClass alloc] init];
+    [predicateClass testNSPredicate];
 }
 
 +(void)testClassMethods {
@@ -169,24 +178,20 @@
     NSString *isStringEqual = equal ? @"TRUE" : @"FALSE";
    // NSLog(@"String is equal to Http: %@", isStringEqual);
     
-
-    
-    
     // Print the number inside the 2D arrays in various ways
+    //NSArray *array2D = [Arrays create2DArrays];
+
     NSArray *sample2DArray = @[@[@"1",@"2",@"3"],
                                @[@"4",@"5",@"6"],
                                @[@"7",@"8",@"9"]];
-    //NSArray *array2D = [Arrays create2DArrays];
-    NSArray *array2D = sample2DArray;
 
-    
     /* Print the array in sequential order
      Algo: If you are iterating the array in sequential order, use
      forin loop. When you start examine closely how the array is structured
      We have a array inside another array. Forin means what's the object
      inside the array. Once you have it print it out.
     */
-    for (NSArray *innerArray in array2D) {
+    for (NSArray *innerArray in sample2DArray) {
         for (NSString *stringNum in innerArray) {
            // NSLog(@"%@", stringNum);
         }
@@ -503,7 +508,7 @@ enum TestNum {
     Arrays *array = [[Arrays alloc] init];
    // [array createStrings];
    // [array printArray];
-   // [array createArrays];
+    [array createArrays];
     
     Operators *operator = [[Operators alloc] init];
     //[operator testOperations];
