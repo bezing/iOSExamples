@@ -48,16 +48,30 @@
     
    // [self runKeyValueTest];
     
-    [self testCategories];
+   // [self testCategories];
+    
+  //  [ViewController testClassMethods];
+    
+}
+
++(void)testClassMethods {
+    // Self inside the class method refers to the class
+    // instead of the instance so the line below is
+    // like calling [ViewController printString;
+    [ViewController printString];
+}
+
++(void)printString {
+    NSLog(@"Superclass Class method");
 }
 
 -(void)testCategories {
     
     // Use NSString+Helper category
     NSString *blankString = @"";
-    NSLog([blankString isBlank] ? @"Blank" : @"String has character");
-    NSString *stringValue = @"SCSd";
-    NSLog([stringValue isBlank] ? @"Blank" : @"String has character");
+    NSLog([blankString isBlank] ? @"Blank String" : @"String has character");
+    NSString *stringValue = @"SCSsssd";
+    NSLog([stringValue isBlank] ? @"Blank String" : @"String has character");
     
     [stringValue printString];
 }

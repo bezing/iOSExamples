@@ -23,10 +23,11 @@
 
 -(void)printString {
     
-    self.stringVal = @"HEl";
+    //self.stringVal = @"HEl";
     
     
-    NSLog(@" %@   %@", self, self.stringVal);
+//    NSLog(@" %@   %@", self, self.stringVal);
+    NSLog(@"%@", self);
 }
 
 @end

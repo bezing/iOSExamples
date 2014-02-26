@@ -12,8 +12,12 @@
 @interface ViewController : UIViewController
 
 @property (nonatomic) KVC *characterKVC;
-
 @property (nonatomic, readwrite) NSString *stringBlockValue;
+@property (nonatomic, readwrite) NSString *testStringValues;
 
 - (IBAction)showJSONClass:(id)sender;
+
++(void)printString;
++(void)testClassMethods;
+
 @end
