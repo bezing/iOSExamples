@@ -64,7 +64,7 @@
 
 -(void)testNetworking {
     NetworkViewController *nvc = [[NetworkViewController alloc] init];
-    [nvc testAFNetworking];
+    [nvc testAFNetworkingJSON];
 }
 
 -(void)testDatabase {
