@@ -13,5 +13,6 @@
 
 -(void)testOperations;
 -(void)checkTernaryOperator;
+-(void)testSwitch;
 
 @end

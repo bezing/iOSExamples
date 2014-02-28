@@ -30,8 +30,6 @@
 
 -(void)checkTernaryOperator {
     
-    
-    
     /*
      Ternarary operator
      
@@ -46,7 +44,33 @@
     // Can also use this to print bool values to true or false
     BOOL boolValue = FALSE;
     NSLog(boolValue ? @"TRUE" : @"FALSE");
+
+}
+
+enum TestNum {
+    NumA= 1,
+    NumB= 2,
+    NumC= 3
+};
+
+-(void)testSwitch {
+    int a = 1;
+    int b = 5;
+    int c = a / b ;
+    //NSLog(@"%f", c);
     
+    switch (a) {
+        case NumA:
+            NSLog(@"A");
+            break;
+            
+        case NumC:
+            NSLog(@"C");
+            break;
+            
+        default:
+            break;
+    }
 
 }
 

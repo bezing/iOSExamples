@@ -21,6 +21,8 @@
 		60A6AAC7188FECD70077C74F /* Variables.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A6AAC6188FECD70077C74F /* Variables.m */; };
 		60A9875E18BD24F5009197A0 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A9875D18BD24F5009197A0 /* NSString+Helper.m */; };
 		60AB045B18BE7FE000F66DEF /* NSPredicateClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AB045A18BE7FE000F66DEF /* NSPredicateClass.m */; };
+		60ABB8A718C001600004C462 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ABB8A618C001600004C462 /* DatabaseManager.m */; };
+		60ABB8AB18C00A460004C462 /* DatabasePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60ABB8AA18C00A460004C462 /* DatabasePlist.plist */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60AFC64718BD91A200A3EB79 /* SubclassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFC64618BD91A200A3EB79 /* SubclassViewController.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
@@ -78,6 +80,9 @@
 		60A9875D18BD24F5009197A0 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Helper.m"; path = "iOSExamples/NSString+Helper.m"; sourceTree = "<group>"; };
 		60AB045918BE7FE000F66DEF /* NSPredicateClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSPredicateClass.h; path = iOSExamples/NSPredicateClass.h; sourceTree = "<group>"; };
 		60AB045A18BE7FE000F66DEF /* NSPredicateClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSPredicateClass.m; path = iOSExamples/NSPredicateClass.m; sourceTree = "<group>"; };
+		60ABB8A518C001600004C462 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseManager.h; path = iOSExamples/DatabaseManager.h; sourceTree = "<group>"; };
+		60ABB8A618C001600004C462 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseManager.m; path = iOSExamples/DatabaseManager.m; sourceTree = "<group>"; };
+		60ABB8AA18C00A460004C462 /* DatabasePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DatabasePlist.plist; path = iOSExamples/DatabasePlist.plist; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
 		60AE19761873EEA100A08947 /* Operators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operators.m; sourceTree = "<group>"; };
 		60AFC64518BD91A200A3EB79 /* SubclassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubclassViewController.h; path = iOSExamples/SubclassViewController.h; sourceTree = "<group>"; };
@@ -221,9 +226,20 @@
 			name = Utility;
 			sourceTree = "<group>";
 		};
+		60ABB8A418C0012B0004C462 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				60ABB8A518C001600004C462 /* DatabaseManager.h */,
+				60ABB8A618C001600004C462 /* DatabaseManager.m */,
+				60ABB8AA18C00A460004C462 /* DatabasePlist.plist */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		60E28D72186E182F00D9E723 = {
 			isa = PBXGroup;
 			children = (
+				60ABB8A418C0012B0004C462 /* Database */,
 				60A9875B18BD24CE009197A0 /* Utility */,
 				60A4F05C18BA799300815029 /* Data Communication */,
 				60A4F04318B7C51F00815029 /* MISC */,
@@ -380,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60A4F05B18B9BC5400815029 /* Placeholder.png in Resources */,
+				60ABB8AB18C00A460004C462 /* DatabasePlist.plist in Resources */,
 				60E28D95186E182F00D9E723 /* Main_iPad.storyboard in Resources */,
 				60E28D9A186E182F00D9E723 /* Images.xcassets in Resources */,
 				60E28D92186E182F00D9E723 /* Main_iPhone.storyboard in Resources */,
@@ -412,6 +429,7 @@
 				60A4F04118B4527F00815029 /* Blocks.m in Sources */,
 				60E28DB8186E185000D9E723 /* Arrays.m in Sources */,
 				60A4F04718B7C66E00815029 /* TableViewController.m in Sources */,
+				60ABB8A718C001600004C462 /* DatabaseManager.m in Sources */,
 				60AE19771873EEA100A08947 /* Operators.m in Sources */,
 				60A4F06218BA79E600815029 /* ViewControllerB.m in Sources */,
 				60A4F05F18BA79C600815029 /* ViewControllerA.m in Sources */,

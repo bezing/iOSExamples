@@ -17,6 +17,7 @@
 #import "KVC.h"
 #import "NSString+Helper.h"
 #import "NSPredicateClass.h"
+#import "DatabaseManager.h"
 
 @interface ViewController ()
 
@@ -53,7 +54,17 @@
     
   //  [ViewController testClassMethods];
     
-    [self testPredicateClass];
+   // [self testPredicateClass];
+    
+    [self testDatabase];
+}
+
+-(void)testDatabase {
+    DatabaseManager *databaseManager = [DatabaseManager databaseManager];
+    //[databaseManager testNSUserDefaults];
+    
+    //[databaseManager testPlist];
+    [databaseManager testWriteablePlist];
     
 }
 
@@ -75,7 +86,6 @@
 }
 
 -(void)testCategories {
-    
     // Use NSString+Helper category
     NSString *blankString = @"";
     NSLog([blankString isBlank] ? @"Blank String" : @"String has character");
@@ -340,8 +350,7 @@ enum TestNum {
         sampleInt +=10;
         NSLog(@"%i", sampleInt);
     }
-    
-    
+      
 }
 
 -(BOOL)checkPalindrom:(NSString*)string {

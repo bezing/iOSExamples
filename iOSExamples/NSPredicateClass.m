@@ -15,8 +15,6 @@
 
 
 -(void)testArrayOfStrings {
-    
-    
     /*
         Searching arrays of string objects which is different from searching a array
      of NSPredicateClass objects like in the testPredicate method
@@ -65,7 +63,6 @@
           people.age = ages[idx];
           [peopleArray addObject:people];
     }];
-    
 
     /*
       We are searching a array which contains NSPredicateClass objects with properties
@@ -84,7 +81,11 @@
     NSLog(@"%@", firstNamesFound);
     NSLog(@"%@", lastNamesFound);
     NSLog(@"%@", agesFound);
+    
+    
 }
+
+
 
 @end
 
