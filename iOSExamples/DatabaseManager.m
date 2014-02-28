@@ -77,18 +77,20 @@ static DatabaseManager *databaseManager = nil;
     /*
      Now we grab the newly created plist in documents directory and write to it.
     */
-    NSMutableDictionary *plistDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:destPath];
-    [self printPlistDictionart:plistDictionary];
+    NSMutableDictionary *plistMutDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:destPath];
+    // Print the dictionary before the change
+    [self printPlistDictionart:plistMutDictionary];
     
-    [plistDictionary setValue:@"Changed String" forKey:@"stringValue"];
+    // Note only the date will be different because you already changed the values
+    [plistMutDictionary setValue:@"Changed String" forKey:@"stringValue"];
     NSDate *date = [NSDate date];
-    [plistDictionary setValue:date forKey:@"dateValue"];
-    NSArray *newArray = @[@"X", @"Y", @"Z"];
-    [plistDictionary setValue:newArray forKey:@"arrayValue"];
+    [plistMutDictionary setValue:date forKey:@"dateValue"];
+    NSArray *newArray = @[@"A", @"B", @"C"];
+    [plistMutDictionary setValue:newArray forKey:@"arrayValue"];
     
-    [plistDictionary writeToFile:destPath atomically:YES];
+    [plistMutDictionary writeToFile:destPath atomically:YES];
     
-    [self printPlistDictionart:plistDictionary];
+    [self printPlistDictionart:plistMutDictionary];
 }
 
 -(void)printPlistDictionart:(NSDictionary*)dictionary {

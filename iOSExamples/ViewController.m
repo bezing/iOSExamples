@@ -18,6 +18,7 @@
 #import "NSString+Helper.h"
 #import "NSPredicateClass.h"
 #import "DatabaseManager.h"
+#import "NetworkViewController.h"
 
 @interface ViewController ()
 
@@ -56,7 +57,14 @@
     
    // [self testPredicateClass];
     
-    [self testDatabase];
+   // [self testDatabase];
+    
+    [self testNetworking];
+}
+
+-(void)testNetworking {
+    NetworkViewController *nvc = [[NetworkViewController alloc] init];
+    [nvc testAFNetworking];
 }
 
 -(void)testDatabase {
@@ -67,7 +75,6 @@
     [databaseManager testWriteablePlist];
     
 }
-
 
 -(void)testPredicateClass {
     NSPredicateClass *predicateClass = [[NSPredicateClass alloc] init];

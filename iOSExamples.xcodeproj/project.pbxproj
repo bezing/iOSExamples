@@ -23,6 +23,7 @@
 		60AB045B18BE7FE000F66DEF /* NSPredicateClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AB045A18BE7FE000F66DEF /* NSPredicateClass.m */; };
 		60ABB8A718C001600004C462 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ABB8A618C001600004C462 /* DatabaseManager.m */; };
 		60ABB8AB18C00A460004C462 /* DatabasePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60ABB8AA18C00A460004C462 /* DatabasePlist.plist */; };
+		60ABBA8018C0210A0004C462 /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ABBA7F18C0210A0004C462 /* NetworkViewController.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
 		60AFC64718BD91A200A3EB79 /* SubclassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFC64618BD91A200A3EB79 /* SubclassViewController.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
@@ -41,6 +42,7 @@
 		60E28DAB186E182F00D9E723 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60E28DA9186E182F00D9E723 /* InfoPlist.strings */; };
 		60E28DAD186E182F00D9E723 /* iOSExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E28DAC186E182F00D9E723 /* iOSExamplesTests.m */; };
 		60E28DB8186E185000D9E723 /* Arrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E28DB7186E185000D9E723 /* Arrays.m */; };
+		CA10F573C020428A8A521317 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEA2AEB581E4701A6D66890 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		028BA6A32378484F96189B67 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		4AEA2AEB581E4701A6D66890 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A4F03C18B4527100815029 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDViewController.h; path = iOSExamples/GCDViewController.h; sourceTree = "<group>"; };
 		60A4F03D18B4527100815029 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDViewController.m; path = iOSExamples/GCDViewController.m; sourceTree = "<group>"; };
 		60A4F03F18B4527F00815029 /* Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Blocks.h; path = iOSExamples/Blocks.h; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		60ABB8A518C001600004C462 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseManager.h; path = iOSExamples/DatabaseManager.h; sourceTree = "<group>"; };
 		60ABB8A618C001600004C462 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseManager.m; path = iOSExamples/DatabaseManager.m; sourceTree = "<group>"; };
 		60ABB8AA18C00A460004C462 /* DatabasePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DatabasePlist.plist; path = iOSExamples/DatabasePlist.plist; sourceTree = "<group>"; };
+		60ABBA7E18C0210A0004C462 /* NetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkViewController.h; path = iOSExamples/NetworkViewController.h; sourceTree = "<group>"; };
+		60ABBA7F18C0210A0004C462 /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkViewController.m; path = iOSExamples/NetworkViewController.m; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
 		60AE19761873EEA100A08947 /* Operators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operators.m; sourceTree = "<group>"; };
 		60AFC64518BD91A200A3EB79 /* SubclassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubclassViewController.h; path = iOSExamples/SubclassViewController.h; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				60E28D83186E182F00D9E723 /* UIKit.framework in Frameworks */,
 				60A4F06418BA7A1F00815029 /* SDWebImage.framework in Frameworks */,
 				60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */,
+				CA10F573C020428A8A521317 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +155,7 @@
 			name = Callbacks;
 			sourceTree = "<group>";
 		};
-		60A4F04318B7C51F00815029 /* MISC */ = {
+		60A4F04318B7C51F00815029 /* Starting */ = {
 			isa = PBXGroup;
 			children = (
 				60E28D96186E182F00D9E723 /* ViewController.h */,
@@ -160,10 +167,10 @@
 				60E28D90186E182F00D9E723 /* Main_iPhone.storyboard */,
 				60E28D93186E182F00D9E723 /* Main_iPad.storyboard */,
 			);
-			name = MISC;
+			name = Starting;
 			sourceTree = "<group>";
 		};
-		60A4F04418B7C55B00815029 /* JSON  */ = {
+		60A4F04418B7C55B00815029 /* Fuzz JSON  */ = {
 			isa = PBXGroup;
 			children = (
 				60A4F05418B9B2AA00815029 /* resources */,
@@ -176,7 +183,7 @@
 				60A4F05818B9BC2400815029 /* WebViewController.m */,
 				60A4F04B18B7D67200815029 /* Constants.h */,
 			);
-			name = "JSON ";
+			name = "Fuzz JSON ";
 			sourceTree = "<group>";
 		};
 		60A4F04C18B8258200815029 /* frameworks */ = {
@@ -236,20 +243,31 @@
 			name = Database;
 			sourceTree = "<group>";
 		};
+		60ABB8AC18C020170004C462 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				60ABBA7E18C0210A0004C462 /* NetworkViewController.h */,
+				60ABBA7F18C0210A0004C462 /* NetworkViewController.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		60E28D72186E182F00D9E723 = {
 			isa = PBXGroup;
 			children = (
+				60ABB8AC18C020170004C462 /* Networking */,
 				60ABB8A418C0012B0004C462 /* Database */,
 				60A9875B18BD24CE009197A0 /* Utility */,
 				60A4F05C18BA799300815029 /* Data Communication */,
-				60A4F04318B7C51F00815029 /* MISC */,
+				60A4F04318B7C51F00815029 /* Starting */,
 				60A4F00318A58C0400815029 /* Callbacks */,
 				60A6AAC8189C3E2A0077C74F /* MultiThreading */,
-				60A4F04418B7C55B00815029 /* JSON  */,
+				60A4F04418B7C55B00815029 /* Fuzz JSON  */,
 				60E28D84186E182F00D9E723 /* Examples */,
 				60E28DA6186E182F00D9E723 /* iOSExamplesTests */,
 				60E28D7D186E182F00D9E723 /* Frameworks */,
 				60E28D7C186E182F00D9E723 /* Products */,
+				028BA6A32378484F96189B67 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +288,7 @@
 				60E28D80186E182F00D9E723 /* CoreGraphics.framework */,
 				60E28D82186E182F00D9E723 /* UIKit.framework */,
 				60E28DA0186E182F00D9E723 /* XCTest.framework */,
+				4AEA2AEB581E4701A6D66890 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -326,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60E28DB0186E183000D9E723 /* Build configuration list for PBXNativeTarget "iOSExamples" */;
 			buildPhases = (
+				77308A5F0A4C4F74939EC328 /* Check Pods Manifest.lock */,
 				60E28D77186E182F00D9E723 /* Sources */,
 				60E28D78186E182F00D9E723 /* Frameworks */,
 				60E28D79186E182F00D9E723 /* Resources */,
+				73F157258BA740FB8E6F2C1B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -414,6 +435,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73F157258BA740FB8E6F2C1B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77308A5F0A4C4F74939EC328 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		60E28D77186E182F00D9E723 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -433,6 +487,7 @@
 				60AE19771873EEA100A08947 /* Operators.m in Sources */,
 				60A4F06218BA79E600815029 /* ViewControllerB.m in Sources */,
 				60A4F05F18BA79C600815029 /* ViewControllerA.m in Sources */,
+				60ABBA8018C0210A0004C462 /* NetworkViewController.m in Sources */,
 				60A6AAC7188FECD70077C74F /* Variables.m in Sources */,
 				60AB045B18BE7FE000F66DEF /* NSPredicateClass.m in Sources */,
 				60E28D8F186E182F00D9E723 /* AppDelegate.m in Sources */,
@@ -572,6 +627,7 @@
 		};
 		60E28DB1186E183000D9E723 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 028BA6A32378484F96189B67 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -592,6 +648,7 @@
 		};
 		60E28DB2186E183000D9E723 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 028BA6A32378484F96189B67 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
