@@ -20,6 +20,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        [self defineSaveBlock];
+
     }
     return self;
 }
@@ -30,6 +33,15 @@
 	// Do any additional setup after loading the view.
     
     [self showDataValues];
+    
+    
+}
+
+
+-(void)defineSaveBlock {
+    self.saveBlock = ^(void ) {
+        NSLog(@"Save data");
+    };
 }
 
 - (void)didReceiveMemoryWarning

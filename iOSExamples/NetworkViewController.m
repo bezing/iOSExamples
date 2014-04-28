@@ -42,6 +42,10 @@
     /*
      Testing two ways to pull JSON data with AFNetworking, 
      AFHTTPRequestOperation and AFHTTPSessionManager
+     
+     We use AFHTTPRequestOperation for just one operation to pull JSON data from the request URL
+     We use AFHTTPSessionManager to make several request, ie use it to perform Restful verbs
+     
     */
     
     NSURLRequest *request = [NSURLRequest requestWithURL:kFuzzURL];
@@ -81,3 +85,28 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,9 +18,13 @@
 @property (nonatomic, readwrite) NSString *methodString;
 @property (nonatomic, readwrite) NSString *segueDataString;
 
-@property (nonatomic, retain) id<ViewControllerBDelegate>delegate;
+@property (nonatomic, assign) id<ViewControllerBDelegate>delegate;
 @property (nonatomic, copy) void(^dataBlock)(NSString *dataString);
 
+@property (nonatomic,copy) void(^saveBlock)(void);
+
 -(void)passingData:(NSString*)dataString;
+
+-(void)defineSaveBlock;
 
 @end

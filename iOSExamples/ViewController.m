@@ -19,6 +19,7 @@
 #import "NSPredicateClass.h"
 #import "DatabaseManager.h"
 #import "NetworkViewController.h"
+#import "RestOperation.h"
 
 @interface ViewController ()
 
@@ -57,9 +58,46 @@
     
    // [self testPredicateClass];
     
-   // [self testDatabase];
+  //  [self testDatabase];
     
-    [self testNetworking];
+   // [self testNetworking];
+    
+   // [self testCode];
+
+
+   // [self testRest];
+}
+
+- (IBAction)showTableView:(id)sender {
+}
+
+-(void)testRest {
+    
+    RestOperation *restClass = [[RestOperation alloc ] init];
+    //[restClass uploadFile];
+    //[restClass uploadResume];
+    
+}
+
+-(void)testCode {
+    
+    // Using a index i in the forin loop
+    NSArray *stringArray = @[@"one",@"two",@"three"];
+    int i = 0;
+    for (NSString *string in stringArray) {
+        NSString *stringVal = [stringArray objectAtIndex:i];
+      //  NSLog(@"%@", stringVal);
+        i++;
+    }
+    
+    
+    
+    
+    NSArray *stringTestArray = @[@"onw",@"two",@"three"];
+    for (NSString *test in stringTestArray) {
+        NSLog(@"%@", test);
+    }
+    
 }
 
 -(void)testNetworking {
@@ -107,10 +145,11 @@
     [self removeObserver:self forKeyPath:@"characterLife"];
 }
 
+
 // Event is called, since we add ourselves as an observer, when the values change
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
-    // Can compare old and new values to only cll a method when it's changed
+    // Can compare old and new values to only call a method when it's changed
     if ([keyPath isEqualToString:@"characterName"]) {
         NSString *oldName = [change objectForKey:@"old"];
         NSString *newcharacterName = [change objectForKey:@"new"];
@@ -246,7 +285,12 @@
      times and to use the index flag of i and inside the forin loop to give use the
      inner arrays inside the 2d array
     
+     NOTE: we are running three iterations and for each iteration we select to pull 
+           out a select value from the inner array, and to get the inner array
+           we run a forin loop of the outer array
+           sample2dArray is the outerArray
     */
+    
     
     for (int i =0; i<3; i++) {
         for (NSArray *innerArray in sample2DArray) {
@@ -304,6 +348,8 @@ enum TestNum {
 // Daily line code
 -(void)runDailyLineOfCode {
     
+    
+    
     int i = 0;
     
     while (i<10) {
@@ -356,6 +402,16 @@ enum TestNum {
     while (sampleInt < 100) {
         sampleInt +=10;
         NSLog(@"%i", sampleInt);
+    }
+    
+    // Using a index i in the forin loop to control values
+    // being pulled out of the array
+     NSArray *stringArray = @[@"one",@"two",@"three"];
+    int f = 0;
+    for (NSString *string in stringArray) {
+        NSString *stringVal = [stringArray objectAtIndex:f];
+        NSLog(@"%@", stringVal);
+        f++;
     }
       
 }
@@ -549,13 +605,13 @@ enum TestNum {
 
 
 - (IBAction)showDataExchange:(id)sender {
-    
-    
     ViewControllerA *vcA = (ViewControllerA*) [self.storyboard instantiateViewControllerWithIdentifier:@"ViewControllerA"];
     [self.navigationController pushViewController:vcA animated:YES];
 }
 
 - (IBAction)showJSONClass:(id)sender {
+    
+    // Fuzz test to pull data from network and add it to a table view
     
     // Create three table view controllers and add to navigational controllers then add to
     // a tab bar controller then push on top of navigational controller
@@ -599,6 +655,8 @@ enum TestNum {
      All the call back methods would be defined here like the blocks
     -These examples are how these objects communicate and pass data 
      between each other.
+    -We are passing the block of code here to anther object without
+     the extra code like delegation (with Protocol definitions)
      */
     
     DataManager *dataManager = [DataManager dataManager];

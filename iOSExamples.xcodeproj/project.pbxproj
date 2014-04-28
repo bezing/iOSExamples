@@ -25,6 +25,10 @@
 		60ABB8AB18C00A460004C462 /* DatabasePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60ABB8AA18C00A460004C462 /* DatabasePlist.plist */; };
 		60ABBA8018C0210A0004C462 /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ABBA7F18C0210A0004C462 /* NetworkViewController.m */; };
 		60AE19771873EEA100A08947 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE19761873EEA100A08947 /* Operators.m */; };
+		60AEAB86190E174A00DA9FB7 /* SampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AEAB85190E174A00DA9FB7 /* SampleTableViewController.m */; };
+		60AFA212190390F200BFF270 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AFA211190390F200BFF270 /* libPods.a */; };
+		60AFA215190391EB00BFF270 /* RestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFA214190391EB00BFF270 /* RestOperation.m */; };
+		60AFA218190394B300BFF270 /* chenResume.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 60AFA217190394B300BFF270 /* chenResume.pdf */; };
 		60AFC64718BD91A200A3EB79 /* SubclassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFC64618BD91A200A3EB79 /* SubclassViewController.m */; };
 		60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D7E186E182F00D9E723 /* Foundation.framework */; };
 		60E28D81186E182F00D9E723 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E28D80186E182F00D9E723 /* CoreGraphics.framework */; };
@@ -42,7 +46,6 @@
 		60E28DAB186E182F00D9E723 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60E28DA9186E182F00D9E723 /* InfoPlist.strings */; };
 		60E28DAD186E182F00D9E723 /* iOSExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E28DAC186E182F00D9E723 /* iOSExamplesTests.m */; };
 		60E28DB8186E185000D9E723 /* Arrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E28DB7186E185000D9E723 /* Arrays.m */; };
-		CA10F573C020428A8A521317 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEA2AEB581E4701A6D66890 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,12 @@
 		60ABBA7F18C0210A0004C462 /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkViewController.m; path = iOSExamples/NetworkViewController.m; sourceTree = "<group>"; };
 		60AE19751873EEA100A08947 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
 		60AE19761873EEA100A08947 /* Operators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operators.m; sourceTree = "<group>"; };
+		60AEAB84190E174A00DA9FB7 /* SampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleTableViewController.h; path = iOSExamples/SampleTableViewController.h; sourceTree = "<group>"; };
+		60AEAB85190E174A00DA9FB7 /* SampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleTableViewController.m; path = iOSExamples/SampleTableViewController.m; sourceTree = "<group>"; };
+		60AFA211190390F200BFF270 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		60AFA213190391EB00BFF270 /* RestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestOperation.h; path = iOSExamples/RestOperation.h; sourceTree = "<group>"; };
+		60AFA214190391EB00BFF270 /* RestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestOperation.m; path = iOSExamples/RestOperation.m; sourceTree = "<group>"; };
+		60AFA217190394B300BFF270 /* chenResume.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = chenResume.pdf; sourceTree = "<group>"; };
 		60AFC64518BD91A200A3EB79 /* SubclassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubclassViewController.h; path = iOSExamples/SubclassViewController.h; sourceTree = "<group>"; };
 		60AFC64618BD91A200A3EB79 /* SubclassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubclassViewController.m; path = iOSExamples/SubclassViewController.m; sourceTree = "<group>"; };
 		60E28D7B186E182F00D9E723 /* iOSExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,12 +131,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60AFA212190390F200BFF270 /* libPods.a in Frameworks */,
 				60E28D81186E182F00D9E723 /* CoreGraphics.framework in Frameworks */,
 				60A4F05018B8276100815029 /* ImageIO.framework in Frameworks */,
 				60E28D83186E182F00D9E723 /* UIKit.framework in Frameworks */,
 				60A4F06418BA7A1F00815029 /* SDWebImage.framework in Frameworks */,
 				60E28D7F186E182F00D9E723 /* Foundation.framework in Frameworks */,
-				CA10F573C020428A8A521317 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,13 +257,34 @@
 			children = (
 				60ABBA7E18C0210A0004C462 /* NetworkViewController.h */,
 				60ABBA7F18C0210A0004C462 /* NetworkViewController.m */,
+				60AFA213190391EB00BFF270 /* RestOperation.h */,
+				60AFA214190391EB00BFF270 /* RestOperation.m */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		60AEAB83190E172000DA9FB7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				60AEAB84190E174A00DA9FB7 /* SampleTableViewController.h */,
+				60AEAB85190E174A00DA9FB7 /* SampleTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		60AFA216190394A900BFF270 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				60AFA217190394B300BFF270 /* chenResume.pdf */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 		60E28D72186E182F00D9E723 = {
 			isa = PBXGroup;
 			children = (
+				60AEAB83190E172000DA9FB7 /* ViewControllers */,
+				60AFA216190394A900BFF270 /* Files */,
 				60ABB8AC18C020170004C462 /* Networking */,
 				60ABB8A418C0012B0004C462 /* Database */,
 				60A9875B18BD24CE009197A0 /* Utility */,
@@ -283,6 +313,7 @@
 		60E28D7D186E182F00D9E723 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60AFA211190390F200BFF270 /* libPods.a */,
 				60A4F04F18B8276100815029 /* ImageIO.framework */,
 				60E28D7E186E182F00D9E723 /* Foundation.framework */,
 				60E28D80186E182F00D9E723 /* CoreGraphics.framework */,
@@ -421,6 +452,7 @@
 				60E28D95186E182F00D9E723 /* Main_iPad.storyboard in Resources */,
 				60E28D9A186E182F00D9E723 /* Images.xcassets in Resources */,
 				60E28D92186E182F00D9E723 /* Main_iPhone.storyboard in Resources */,
+				60AFA218190394B300BFF270 /* chenResume.pdf in Resources */,
 				60E28D89186E182F00D9E723 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +514,7 @@
 				60A9875E18BD24F5009197A0 /* NSString+Helper.m in Sources */,
 				60A4F04118B4527F00815029 /* Blocks.m in Sources */,
 				60E28DB8186E185000D9E723 /* Arrays.m in Sources */,
+				60AFA215190391EB00BFF270 /* RestOperation.m in Sources */,
 				60A4F04718B7C66E00815029 /* TableViewController.m in Sources */,
 				60ABB8A718C001600004C462 /* DatabaseManager.m in Sources */,
 				60AE19771873EEA100A08947 /* Operators.m in Sources */,
@@ -491,6 +524,7 @@
 				60A6AAC7188FECD70077C74F /* Variables.m in Sources */,
 				60AB045B18BE7FE000F66DEF /* NSPredicateClass.m in Sources */,
 				60E28D8F186E182F00D9E723 /* AppDelegate.m in Sources */,
+				60AEAB86190E174A00DA9FB7 /* SampleTableViewController.m in Sources */,
 				60E28D8B186E182F00D9E723 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +673,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSExamples/iOSExamples-Prefix.pch";
 				INFOPLIST_FILE = "iOSExamples/iOSExamples-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -660,6 +698,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSExamples/iOSExamples-Prefix.pch";
 				INFOPLIST_FILE = "iOSExamples/iOSExamples-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

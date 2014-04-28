@@ -78,6 +78,8 @@
     vcB.delegate = self;
     
     // Pass data back from B to A with blocks
+    // This block of code inside A will get called in B so whatever
+    // state or variable it will have will get passed to B to be called.
     vcB.dataBlock = ^ (NSString *dataString) {
         NSLog(@"%@", dataString);
     };
@@ -97,6 +99,26 @@
 // Delegate method of B
 -(void)exchangeData:(NSString *)dataString {
     NSLog(@"%@", dataString);
+}
+
+
+- (IBAction)performSeque:(id)sender {
+    
+    [self performSegueWithIdentifier:@"showViewControllerB" sender:self];
+}
+
+
+// Button on View Controller A
+- (IBAction)callViewControllerBToSaveBlock:(id)sender {
+    
+    ViewControllerB *vcB = (ViewControllerB *)[self.storyboard instantiateViewControllerWithIdentifier:@"ViewControllerB"];
+    
+    
+    [vcB defineSaveBlock];
+    
+    //[self.navigationController pushViewController:vcB animated:YES];
+    vcB.saveBlock();
+    
 }
 
 @end

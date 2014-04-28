@@ -61,6 +61,7 @@ static DatabaseManager *databaseManager = nil;
      We want to create a writable copy of our plist in app bundle so we use NSFileManager to 
      copy the file to the documents directory
     */
+    // Get path of the Documents Directory 
     NSString *destPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                               NSUserDomainMask, YES) lastObject];
     destPath = [destPath stringByAppendingString:@"DatabasePlist.plist"];
